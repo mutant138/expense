@@ -1,0 +1,25 @@
+/* src/components/Navbar.css */
+.navbar-custom {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    margin-left: auto; /* Push navbar items to the right */
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+    border-radius: 5px;
+  }
+  
