@@ -1,25 +1,87 @@
-/* src/components/Navbar.css */
 .navbar-custom {
-    background-color: #f8f9fa; /* Light background color */
-    padding: 10px 20px;
+  background-color: #f8f9fa !important; /* Light background color */
+  padding: 10px 20px !important;
+}
+
+.navbar-brand {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  color: #343a40 !important; /* Dark color for the brand */
+  text-decoration: none !important; /* Remove underline */
+}
+
+.navbar-brand:hover {
+  color: #0c6bdf !important; /* Change color on hover */
+}
+
+.navbar-collapse {
+  display: flex !important;
+  justify-content: flex-end !important; /* Align items to the right */
+}
+
+.navbar-nav {
+  display: flex !important;
+  align-items: center !important; /* Center items vertically */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem !important;
+  padding: 10px 15px !important;
+  color: #343a40 !important; /* Dark color for links */
+  text-decoration: none !important; /* Remove underline */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #e9ecef !important; /* Light gray background on hover */
+  border-radius: 5px !important;
+  color: #007bff !important; /* Change text color on hover */
+}
+
+.btn-danger {
+  color: #fff !important; /* White text color */
+  background-color: #ac0a18 !important; /* Red background */
+  border: none !important; /* Remove border */
+  padding: 8px 12px !important; /* Adjust padding */
+  border-radius: 5px !important; /* Rounded corners */
+  font-size: 1rem !important; /* Font size */
+  cursor: pointer !important; /* Pointer cursor on hover */
+}
+
+.btn-danger:hover {
+  background-color: #781919 !important; /* Darker red on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .navbar-custom {
+    padding: 10px 15px !important; /* Adjust padding for smaller screens */
   }
-  
+
   .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.25rem !important; /* Smaller font size on smaller screens */
   }
-  
+
+  .navbar-collapse {
+    display: block !important; /* Ensure collapse div is displayed */
+  }
+
   .navbar-nav {
-    margin-left: auto; /* Push navbar items to the right */
+    flex-direction: column !important; /* Stack items vertically */
+    align-items: center !important; /* Center items horizontally */
   }
-  
+
   .navbar-nav .nav-link {
-    font-size: 1rem;
-    padding: 10px 15px;
+    display: block !important; /* Stack links vertically */
+    padding: 8px 0 !important; /* Adjust padding */
   }
-  
-  .navbar-nav .nav-link:hover {
-    background-color: #e9ecef; /* Light gray background on hover */
-    border-radius: 5px;
+
+  .btn-danger {
+    margin-top: 10px !important; /* Space above button */
   }
-  
+}
+
+@media (min-width: 768px) {
+  .navbar-custom {
+    padding: 10px 20px !important; /* Reset padding for larger screens */
+  }
+}

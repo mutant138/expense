@@ -1,5 +1,5 @@
 // src/components/SignUp.js
-import React, { useRef, useState , useContext } from 'react';
+import React, { useRef, useState , useContext , useHistory} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './SignUp.css';
@@ -12,6 +12,7 @@ const SignUp = () => {
   const confirmPasswordRef = useRef();
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const history = useHistory();
 
   const authCtx = useContext(AuthContext)
 
@@ -45,6 +46,7 @@ const SignUp = () => {
       setSuccess('Sign up successful!');
       setError('');
       authCtx.login(res.data.idToken)
+      history.push('/home');
       
     } catch (error) {
       console.error(error);

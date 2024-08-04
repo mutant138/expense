@@ -1,0 +1,30 @@
+/* src/components/Profile/CompleteProfile.css */
+.complete-profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .complete-profile-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .complete-profile-form .form-control {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .complete-profile-form .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .complete-profile-form .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  

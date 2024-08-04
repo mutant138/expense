@@ -1,18 +1,11 @@
-// src/App.js
 import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
+import CompleteProfile from './components/Home/CompleteProfile';
+import Home from './components/Home/Home';
 import AuthContext from './store/auth-context';
-
-const Home = () => {
-  return (
-    <div className="container mt-5">
-      <h2>Welcome to the Expense Tracker Homepage</h2>
-    </div>
-  );
-};
 
 const App = () => {
   const authCtx = useContext(AuthContext);
@@ -23,10 +16,11 @@ const App = () => {
       <Switch>
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
-        {authCtx.isLoggedIn && <Route path="/home" exact component={Home} />}
-        <Route path="*">
-          <Redirect to="/signin" />
+        <Route path="/complete-profile" component={CompleteProfile} />
+        <Route path="/home">
+          {authCtx.isLoggedIn ? <Home /> : <Redirect to="/signin" />}
         </Route>
+        <Redirect from="/" to={authCtx.isLoggedIn ? "/home" : "/signin"} />
       </Switch>
     </Router>
   );

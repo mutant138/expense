@@ -1,0 +1,17 @@
+.expense-form-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .expense-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .expense-form .form-control {
+    width: 100%;
+  }
+  
+  .btn-primary {
+    width: 100%;
+  }
+  
