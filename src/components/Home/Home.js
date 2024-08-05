@@ -47,7 +47,7 @@ const Home = () => {
     <div className="container mt-5">
       <h2>Welcome to the Expense Tracker Homepage</h2>
       <ExpenseForm onAddExpense={addExpenseHandler} />
-      <ExpenseList expenses={expenses} />
+      <ExpenseList expenses={expenses} setExpenses={setExpenses} />
     </div>
   );
 };
