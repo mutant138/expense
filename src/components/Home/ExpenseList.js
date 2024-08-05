@@ -9,8 +9,8 @@ const ExpenseList = ({ expenses }) => {
         <p>No expenses added yet.</p>
       ) : (
         <ul className="list-group">
-          {expenses.map((expense, index) => (
-            <li key={index} className="list-group-item">
+          {expenses.map((expense) => (
+            <li key={expense.id} className="list-group-item">
               <strong>{expense.amount} USD</strong> - {expense.description} ({expense.category})
             </li>
           ))}

@@ -8,13 +8,15 @@ const ExpenseForm = ({ onAddExpense }) => {
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('Food');
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
     if (amount.trim() === '' || description.trim() === '') {
       alert('Please fill out all fields.');
       return;
     }
-    onAddExpense({ amount, description, category });
+    
+    const newExpense = { amount, description, category };
+    await onAddExpense(newExpense);
     setAmount('');
     setDescription('');
     setCategory('Food');
